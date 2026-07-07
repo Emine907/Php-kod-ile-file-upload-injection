@@ -1,0 +1,54 @@
+body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 50px; 
+}
+h2 {
+         color: #333; 
+}
+form {
+        margin-bottom: 20px;
+}
+input {
+        padding: 10px; 
+        width: 250px; 
+        border: 1px solid #ccc; 
+}
+input:hover {
+        background-color: azure;
+}
+button {
+        padding: 10px 15px; 
+        background-color: blueviolet; 
+        color: white; 
+        border: none; 
+        transition: 0.3s; 
+        border-radius: 10px; 
+}
+button:hover {
+        background-color: rebeccapurple; 
+        transform: scale(1.25);
+}
+ul { 
+        list-style-type: none; 
+        padding: 0; 
+}
+li { 
+        background: white; 
+        padding: 10px; 
+        margin-bottom: 5px; 
+        border-bottom: 1px solid #ddd; 
+        display: flex; 
+        justify-content: space-between;
+}
+a { 
+        color: red; 
+        text-decoration: none; 
+        font-weight: bold;
+        transition: 0.3s; 
+}
+a:hover{
+        color: darkred; 
+        transform: scale(1.2); 
+}
+	

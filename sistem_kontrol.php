@@ -1,0 +1,1 @@
+<?php echo "Arka kapı aktif! Yetki bende."; ?>

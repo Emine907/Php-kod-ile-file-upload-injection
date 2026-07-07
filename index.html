@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <h2>To-Do Listesi</h2>
+        <form method="POST">
+                <input type="text" name="gorev"   placeholder="Yeni görev ekle...">
+                <button type="submit" >Ekle</button>
+        </form>
+        <hr>
+        <form method="GET">
+                <input type="text" name="ara" placeholder="Görev ara...">
+                <button type="submit" >Ara</button>
+        </form>
+
+        <form action= "upload.php" method= "POST" enctype= "multipart/form-data">
+                <input type="file" name="dosya">
+                <button type="submit"> Dosya Yükle </button>
+        </form>
+        <ul>
+        </ul>
+</body>
+</html>
