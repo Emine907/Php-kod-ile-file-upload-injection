@@ -1,8 +1,8 @@
 <?php
-$sunucu = "localhost";
+$sunucu = "mysql.railway.internal";
 $kullanici = "root";
-$sifre = "";
-$veritabani = "todo_db";
+$sifre = "xIlGKGTCTnYjlGEpLQsrzxMOfNRbiTIo";
+$veritabani = "railway";
 
 //Veritabanı bağlantısı
 $baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani);
