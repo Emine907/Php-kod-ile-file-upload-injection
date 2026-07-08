@@ -2,11 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors' ,1);
 
-$host = getenv('MYSQLHOST') ?: ($_ENV['MYSQLHOST'] ?? null);
-$user = getenv('MYSQLUSER') ?: ($_ENV['MYSQLUSER'] ?? 'root');
-$pass = getenv('MYSQLPASSWORD') ?: ($_ENV['MYSQLPASSWORD'] ?? null);
-$dbname = getenv('MYSQLDATABASE') ?: ($_ENV['MYSQLDATABASE'] ?? null);
-$port = getenv('MYSQLPORT') ?: ($_ENV['MYSQLPORT'] ?? '3306');
+$host = 'mysql.railway.internal';
+$user = 'root';
+$pass = 'xIlGKGTCTnYjlGEpLQsrzxMOfNRbiTIo';
+$dbname = 'railway';
+$port = '3306';
 
 try {
     // PHP'nin varsayılan olarak desteklediği PDO bağlantısını kuruyoruz
