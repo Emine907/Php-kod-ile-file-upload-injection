@@ -2,11 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors' ,1);
 
-$sunucu = 'juntion.proxy.rlwy.net';
-$kullanici = 'root';
-$sifre = '';
-$veritabani = 'railway';
-$port = '3306';
+$sunucu = getenv('MYSQLHOST') ?: ($_ENV['MYSQLHOST'] ?? null);
+$kullanici = getenv('MYSQLUSER') ?: ($_ENV['MYSQLUSER'] ?? 'root';
+$sifre = getenv('MYSQLPASSWORD') ?: ($_ENV['MYSQLPASSWORD'] ?? null;
+$veritabani = getenv('MYSQLDATABASE') ?: (_ENV['MYSQLDATABASE'] ?? null;
+$port = getenv('MYSQLPORT') ?: (_ENV['MYSQLPORT'] ?? '3306');
 
 //Veritabanı bağlantısı
 $baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
