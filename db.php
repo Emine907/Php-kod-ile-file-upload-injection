@@ -1,9 +1,12 @@
 <?php
-$sunucu = "juntion.proxy.rlwy.net";
-$kullanici = "root";
-$sifre = "";
-$veritabani = "railway";
-$port = "3306";
+error_reporting(E_ALL);
+ini_set('display_errors' ,1);
+
+$sunucu = 'juntion.proxy.rlwy.net';
+$kullanici = 'root';
+$sifre = '';
+$veritabani = 'railway';
+$port = '3306';
 
 //Veritabanı bağlantısı
 $baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
