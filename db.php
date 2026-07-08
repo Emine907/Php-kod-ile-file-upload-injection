@@ -2,8 +2,8 @@
 $sunucu = getenv('MYSQLHOST');
 $kullanici = getenv('MYSQLUSER');
 $sifre = getenv('MYSQLPASSWORD');
-$veritabani = ('MYSQLDATABASE');
-$port = ('MYSQLPORT'); 
+$veritabani = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT'); 
 
 //Veritabanı bağlantısı
 $baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
