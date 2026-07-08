@@ -22,9 +22,7 @@ try {
     // Otomatik tablo oluşturma adımı
     $sql = "CREATE TABLE IF NOT EXISTS gorevler (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        gorev_adi VARCHAR(255) NOT NULL,
-        durum TINYINT(1) DEFAULT 0,
-        olusturma_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        gorev_adi VARCHAR(255) NOT NULL
     )";
     
     $conn->exec($sql);
