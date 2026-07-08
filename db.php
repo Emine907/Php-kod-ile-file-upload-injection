@@ -17,6 +17,6 @@ if (!$baglan) {
 $sql = "CREATE TABLE IF NOT EXIST gorevler (
         id INT AUTO_INCREMENT PRIMARY KEY,
         gorev VARCHAR(255) NOT NULL
-);
+)";
 mysqli_query($conn, $sql);
 ?>
