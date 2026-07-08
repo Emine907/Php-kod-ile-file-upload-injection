@@ -3,9 +3,10 @@ $sunucu = getenv('MYSQLHOST');
 $kullanici = getenv('MYSQLUSER');
 $sifre = getenv('MYSQLPASSWORD');
 $veritabani = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT');
 
 //Veritabanı bağlantısı
-$baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani);
+$baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
 
 //Bağlantı hatası kontrolü
 if (!$baglan) {
