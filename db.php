@@ -14,7 +14,7 @@ if (!$baglan) {
 }
 
 
-$sql = "CREAATE TABLE IF NOT EXIST gorevler (
+$sql = "CREATE TABLE IF NOT EXIST gorevler (
         id INT AUTO_INCREMENT PRIMARY KEY,
         gorev VARCHAR(255) NOT NULL
 );
