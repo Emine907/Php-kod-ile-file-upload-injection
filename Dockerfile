@@ -1,2 +1,7 @@
-RUN docker-php-ext-install mysqli pdo_mysql && docker-php-ext-enable-mysqli pdo_mysql
+FROM php:8.4-apache
+
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+
 COPY . /var/www/html/
+
+EXPOSE 80
