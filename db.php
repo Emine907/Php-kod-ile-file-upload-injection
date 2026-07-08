@@ -2,14 +2,14 @@
 error_reporting(E_ALL);
 ini_set('display_errors' ,1);
 
-$sunucu = getenv('MYSQLHOST') ?: ($_ENV['MYSQLHOST'] ?? null);
-$kullanici = getenv('MYSQLUSER') ?: ($_ENV['MYSQLUSER'] ?? 'root');
-$sifre = getenv('MYSQLPASSWORD') ?: ($_ENV['MYSQLPASSWORD'] ?? null);
-$veritabani = getenv('MYSQLDATABASE') ?: ($_ENV['MYSQLDATABASE'] ?? null);
+$host = getenv('MYSQLHOST') ?: ($_ENV['MYSQLHOST'] ?? null);
+$user = getenv('MYSQLUSER') ?: ($_ENV['MYSQLUSER'] ?? 'root');
+$pass = getenv('MYSQLPASSWORD') ?: ($_ENV['MYSQLPASSWORD'] ?? null);
+$dbname = getenv('MYSQLDATABASE') ?: ($_ENV['MYSQLDATABASE'] ?? null);
 $port = getenv('MYSQLPORT') ?: ($_ENV['MYSQLPORT'] ?? '3306');
 
 //Veritabanı bağlantısı
-$baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
+$baglan = mysqli_connect($host, $user, $pass, $dbname, $port);
 
 //Bağlantı hatası kontrolü
 if (!$baglan) {
