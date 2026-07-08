@@ -1,9 +1,9 @@
 <?php
-$sunucu = getenv('MYSQLHOST');
-$kullanici = getenv('MYSQLUSER');
-$sifre = getenv('MYSQLPASSWORD');
-$veritabani = getenv('MYSQLDATABASE');
-$port = getenv('MYSQLPORT');
+$sunucu = "juntion.proxy.rlwy.net";
+$kullanici = "root";
+$sifre = "";
+$veritabani = "railway";
+$port = "3306";
 
 //Veritabanı bağlantısı
 $baglan = mysqli_connect($sunucu, $kullanici, $sifre, $veritabani, $port);
