@@ -1,3 +1,4 @@
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors' ,1);
 
@@ -30,3 +31,4 @@ try {
     // Eğer bağlantı veya sorgu patlarsa ekrana detaylıca yazdıracak
     die("Veritabanı bağlantı hatası (PDO): " . $e->getMessage());
 }
+?>
